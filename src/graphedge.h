@@ -29,6 +29,8 @@ public:
     GraphNode *GetChildNode() { return _childNode; }
     std::vector<std::string> GetKeywords() { return _keywords; }
 
+    
+
     // proprietary functions
     void AddToken(std::string token);
 };
