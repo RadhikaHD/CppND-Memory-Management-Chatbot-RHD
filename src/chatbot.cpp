@@ -80,7 +80,7 @@ ChatBot::ChatBot(ChatBot &&chatbot) {
 }
 
 ChatBot &ChatBot::operator=(ChatBot &&chatbot) {
-  delete _image;
+  //delete _image;
   this->_image = chatbot._image;
   chatbot._image = nullptr;
 
