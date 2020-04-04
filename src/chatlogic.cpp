@@ -180,8 +180,8 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
     //// STUDENT CODE
     ////
-    ChatBot chatbot("../images/chatbot.png");
-    _chatBot = &chatbot;
+    std::unique_ptr<ChatBot> chatbot = std::make_unique <ChatBot> ("../images/chatbot.png");
+    _chatBot = chatbot.get();
 
      // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
     _chatBot->SetChatLogicHandle(this);

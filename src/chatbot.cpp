@@ -81,6 +81,9 @@ ChatBot::ChatBot(ChatBot &&chatbot) {
 
 ChatBot &ChatBot::operator=(ChatBot &&chatbot) {
   //delete _image;
+  if (&chatbot == this)
+  return *this;
+  
   this->_image = chatbot._image;
   chatbot._image = nullptr;
 
